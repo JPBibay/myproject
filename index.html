@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        @media only screen and (max-width:600px){
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-image: url('img/img2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(16, 10vh);
+            }
+
+            .subcon {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+              grid-template-rows: repeat(20, 1fr);
+                grid-column: 2/9;
+                grid-row: 2/15;
+                gap: 6px;
+                
+            }
+
+            .left {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 2/8;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                align-items: center;
+            }
+
+            .img1 {
+                grid-column: 3/4;
+                grid-row: 2/3;
+                height: 90px;
+                width: 90px;
+                margin-left: 4%;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(40Deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8) border-box;
+                border: 5px solid transparent;
+
+            }
+
+            .name {
+                grid-column: 3/4;
+                grid-row: 3/4;
+                text-align: center;
+                font-size: 1.8vh;
+                margin-top: 20%;
+            }
+
+            .right {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 8/20;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding: 10px;
+                font-size: 1.7vw;
+                gap: 10px;
+                font-family: cursive;
+                color: white;
+            }
+
+            .sub1 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding: 5px;
+                height: auto;
+            }
+
+            .sub2 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997);
+                grid-column: 1/2;
+                grid-row: 2/3;
+                padding: 5px;
+            }
+        }
+
+        @media only screen and (min-width:600px){
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-image: url('img/img2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(16, 1fr);
+            }
+
+            .subcon {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+              grid-template-rows: repeat(20, 1fr);
+                grid-column: 2/9;
+                grid-row: 2/15;
+                gap: 6px;
+                
+            }
+
+            .left {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 2/8;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                align-items: center;
+            }
+
+            .img1 {
+                grid-column: 3/4;
+                grid-row: 2/3;
+                height: 90px;
+                width: 90px;
+                margin-left: 4%;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(40Deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8) border-box;
+                border: 5px solid transparent;
+
+            }
+
+            .name {
+                grid-column: 3/4;
+                grid-row: 3/4;
+                text-align: center;
+                font-size: 1.8vh;
+                margin-top: 20%;
+            }
+
+            .right {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 8/20;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding: 10px;
+                font-size: 1.7vw;
+                gap: 10px;
+                font-family: cursive;
+                color: white;
+            }
+
+            .sub1 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding: 5px;
+                height: auto;
+            }
+
+            .sub2 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997);
+                grid-column: 1/2;
+                grid-row: 2/3;
+                padding: 5px;
+            }
+        }
+        @media only screen and (min-width:768px){
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-image: url('img/img3.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(14, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
+
+            .subcon {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                display: grid;
+                grid-template-columns: repeat(24, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+                grid-column: 2/14;
+                grid-row: 2/8;
+                gap: 6px;
+            }
+
+            .left {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 2/12;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                align-items: center;
+            }
+
+            .img1 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                height: 100%;
+                width: 85%;
+                margin-left: 4%;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(40Deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8) border-box;
+                border: 5px solid transparent;
+
+            }
+
+            .name {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                text-align: center;
+                font-size: 2vh;
+                margin-top: 20%;
+            }
+
+            .right {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 10/24;
+                grid-row: 2/12;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 100%);
+                padding: 10px;
+                gap: 10px;
+                font-family: cursive;
+                color: white;
+                font-size: 2vh;
+            }
+
+            .sub1 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding: 5px;
+                height: auto;
+            }
+
+            .sub2 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997);
+                grid-column: 2/3;
+                grid-row: 1/2;
+                padding: 5px;
+            }
+        }
+
+
+        @media only screen and (min-width:992px){
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-image: url('img/img3.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(14, 1fr);
+                grid-template-rows: repeat(8, 6vw);
+            }
+
+            .subcon {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                display: grid;
+                grid-template-columns: repeat(24, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+                grid-column: 2/14;
+                grid-row: 2/8;
+                gap: 6px;
+                
+            }
+
+            .left {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 2/12;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                align-items: center;
+            }
+
+            .img1 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                height: 100%;
+                width: 85%;
+                margin-left: 4%;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(40Deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8) border-box;
+                border: 5px solid transparent;
+
+            }
+
+            .name {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                text-align: center;
+                font-size: 2vh;
+                margin-top: 20%;
+            }
+
+            .right {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 10/24;
+                grid-row: 2/12;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 100%);
+                padding: 10px;
+                gap: 10px;
+                font-family: cursive;
+                color: white;
+                font-size: 1vw;
+            }
+
+            .sub1 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding: 5px;
+                height: auto;
+                
+            }
+
+            .sub2 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997);
+                grid-column: 2/3;
+                grid-row: 1/2;
+                padding: 5px;
+                
+            }
+        }
+
+        @media only screen and (min-width:1200px){
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-image: url('img/img3.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(14, 1fr);
+                grid-template-rows: repeat(8, 6vw);
+            }
+
+            .subcon {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                display: grid;
+                grid-template-columns: repeat(24, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+                grid-column: 2/14;
+                grid-row: 2/8;
+                gap: 6px;
+            }
+
+            .left {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 2/10;
+                grid-row: 2/12;
+                color: white;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                align-items: center;
+            }
+
+            .img1 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                height: 100%;
+                width: 85%;
+                margin-left: 4%;
+                border-radius: 50%;
+                background: linear-gradient(#fff, #fff) padding-box,
+                    linear-gradient(40Deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8) border-box;
+                border: 5px solid transparent;
+
+            }
+
+            .name {
+                grid-column: 2/3;
+                grid-row: 3/4;
+                text-align: center;
+                font-size: 2vh;
+                margin-top: 20%;
+            }
+
+            .right {
+                background-color: rgb(36, 35, 35);
+                display: grid;
+                grid-column: 10/24;
+                grid-row: 2/12;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 100%);
+                padding: 10px;
+                gap: 10px;
+                font-family: cursive;
+                color: white;
+                font-size: 2vh;
+            }
+
+            .sub1 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997, #E3C4A8);
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding: 5px;
+                height: auto;
+            }
+
+            .sub2 {
+                background: linear-gradient(30deg, #E3C4A8, #ffb997, #833861, #ffb997);
+                grid-column: 2/3;
+                grid-row: 1/2;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="subcon">
+            <div class="left">
+                <img class="img1" src="img/img1.jpg">
+                <div class="name">
+                    <strong>@JPBibay</strong><br>
+                    <strong>John Paul Bibay</strong>
+                </div>
+            </div>
+            <div class="right">
+                <div class="sub1">
+                    <center>
+                        <h2>About Me</h2>
+                    </center>
+                    <p><strong>Name:</strong> John Paul Sumagaysay Bibay</p>
+                    <p><strong>Age:</strong> 21</p>
+                    <p><strong>Address:</strong> Brgy. Oringao Kabankalan City</p>
+                    <p><strong>Status:</strong> Single </p>
+                    <center>
+                        <h3>Hobbies:</h3>
+                    </center>
+                    <p>My hobbies when i have a liesure time are reading web novel watching anime, solving rubics cube
+                        and sleeping.</p>
+
+                </div>
+                <div class="sub2">
+                    <center>
+                        <h3>Educational Background:</h3>
+                    </center>
+                    <p><strong>Elementary</strong> - At Oringao Elementary School</p>
+                    <p><strong>High School</strong> - FGSNHS (Junior HS and Senior HS)</p>
+                    <p><strong>College</strong> - Central Philippine State University
+                        taking Bachelor of Science in Information Technology</p>
+                    <center>
+                        <h3>Future Plans/Goals:</h3>
+                    </center>
+                    <p>To broaden my knowledge in IT field and find a better job and that will help my family someday.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
